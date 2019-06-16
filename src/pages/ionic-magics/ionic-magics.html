@@ -1,0 +1,89 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Ionic Magics</ion-title>
+
+    <ion-buttons end>
+        <button ion-button icon-only (click)="presentPopover($event)">
+          <ion-icon name="more"></ion-icon>
+        </button>
+      </ion-buttons>
+
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+    <ion-content>
+
+        <ion-list>
+          <a ion-item (click)="openModal()">
+            Search Bar
+          </a>
+
+          <a ion-item >
+              Range Bar
+          </a>
+          <ion-item>
+
+            <ion-range [(ngModel)]="brightness">
+              <ion-icon range-left small name="sunny"></ion-icon>
+              <ion-icon range-right name="sunny"></ion-icon>
+            </ion-range>
+            <ion-range min="-200" max="200" pin="true" [(ngModel)]="contrast" color="secondary">
+              <ion-icon range-left small name="contrast"></ion-icon>
+              <ion-icon range-right name="contrast"></ion-icon>
+            </ion-range>
+
+            <ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" color="dark">
+                <ion-icon range-left small name="brush"></ion-icon>
+                <ion-icon range-right name="brush"></ion-icon>
+            </ion-range>
+
+            <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" color="danger">
+                <ion-icon range-left small color="danger" name="thermometer"></ion-icon>
+                <ion-icon range-right color="danger" name="thermometer"></ion-icon>
+            </ion-range>
+
+
+            
+          </ion-item>
+          <a ion-item >
+              Gestures
+          </a>
+          <ion-item >
+
+            <ion-card (tap)="tapEvent($event)">
+                <ion-item>
+                  Tapped: {{tap}} times
+                </ion-item>
+              </ion-card>
+            
+              <ion-card (press)="pressEvent($event)">
+                <ion-item>
+                  Pressed: {{press}} times
+                </ion-item>
+              </ion-card>
+            
+              <ion-card (pan)="panEvent($event)">
+                <ion-item>
+                  Panned: {{pan}} times
+                </ion-item>
+              </ion-card>
+            
+              <ion-card (swipe)="swipeEvent($event)">
+                <ion-item>
+                  Swiped: {{swipe}} times
+                </ion-item>
+              </ion-card>
+              
+          </ion-item>
+        </ion-list>
+      
+      </ion-content>
+  
+
+</ion-content>

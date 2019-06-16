@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Introduce yourself</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+    <ion-item class="inputIntroYourself">
+        <ion-label floating>Name</ion-label>
+        <ion-input type="text" [(ngModel)]="name" name="name"></ion-input>
+    </ion-item>
+
+    <ion-item class="inputIntroYourself">
+        <ion-label floating>City</ion-label>
+        <ion-input type="text" [(ngModel)]="city" name="city"></ion-input>
+    </ion-item>
+      
+    <ion-item class="dateIntroYourself">
+        <ion-label>Date of Birth</ion-label>
+        <ion-datetime displayFormat="MMM DD, YYYY" [(ngModel)]="dateofbirth" name="dateofbirth"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="dateIntroYourself">
+        <ion-label>Duration of daily study</ion-label>
+        <ion-datetime displayFormat="HH:mm" [(ngModel)]="studyTime" name="studyTime"></ion-datetime>
+    </ion-item>
+
+    <ion-item class="inputIntroYourself">
+        <ion-label>What's your stage in Ionic</ion-label>
+        <ion-select [(ngModel)]="ionicStage" name="ionicStage" submitText="Okay" cancelText="Nah">
+          <ion-option value="Beginner">Beginner</ion-option>
+          <ion-option value="Intermediate">Intermediate</ion-option>
+          <ion-option value="Advanved">Advanved</ion-option>
+        </ion-select>
+  </ion-item>
+
+  <p class="dateIntroYourself"> Which of the following technologies you already know?</p>
+
+  <ion-item class="inputIntroYourself">
+      <ion-label>Android Studio</ion-label>
+      <ion-checkbox color="dark" checked="false" (ionChange)="datachanged1($event)"></ion-checkbox>
+  </ion-item>
+
+  <ion-item class="inputIntroYourself">
+      <ion-label>Xamarin</ion-label>
+      <ion-checkbox color="dark" checked="false" (ionChange)="datachanged2($event)"></ion-checkbox>
+  </ion-item>
+
+  <ion-item class="inputIntroYourself">
+      <ion-label>Flutter</ion-label>
+      <ion-checkbox color="dark" checked="false" (ionChange)="datachanged3($event)"></ion-checkbox>
+  </ion-item>
+
+  <div class="button-center">
+    <button ion-button color="dark" round (click)="submitClick()">Submit</button>
+  </div>
+  
+
+</ion-content>

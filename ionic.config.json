@@ -1,0 +1,7 @@
+{
+  "name": "iComp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

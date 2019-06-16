@@ -1,0 +1,101 @@
+
+<ion-content padding>
+
+  <h1 class="centre-text" style="color:blue">Profile</h1>
+
+  <ion-grid class="centre-grid">
+
+    <ion-row class="row-margin">
+
+      <ion-col>
+        <h5 class="left-grid">Name</h5>
+      </ion-col>
+      <ion-col>
+        <h6 class="right-grid"> {{ name }} </h6>
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="row-margin">
+        <ion-col>
+          <h5 class="left-grid">City</h5>
+        </ion-col>
+        <ion-col>
+          <h6 class="right-grid"> {{ city }} </h6>
+        </ion-col>
+    </ion-row>
+    
+    <ion-row class="row-margin">
+          <ion-col>
+            <h5 class="left-grid">Date of Birth</h5>
+          </ion-col>
+          <ion-col>
+            <h6 class="right-grid"> {{ dob }} </h6>
+          </ion-col>
+    </ion-row>
+
+    <ion-row class="row-margin">
+          <ion-col>
+            <h5 class="left-grid">Study duration</h5>
+          </ion-col>
+          <ion-col>
+            <h6 class="right-grid"> {{ duration }} </h6>
+          </ion-col>
+    </ion-row>
+
+    <ion-row class="row-margin">
+          <ion-col>
+            <h5 class="left-grid">Ionic stage</h5>
+          </ion-col>
+          <ion-col>
+            <h6 class="right-grid"> {{ stage }} </h6>
+          </ion-col>
+    </ion-row>
+
+    <ion-row class="row-margin">
+          <ion-col>
+            <h5 class="left-grid">Technology known</h5>
+          </ion-col>
+          <ion-col>
+            <h6 class="right-grid"> {{ technology }} </h6>
+          </ion-col>
+    </ion-row>
+
+    <ion-row class="row-margin">
+
+      <ion-col>
+
+          <ion-item>
+              <ion-label>Change the font color</ion-label>
+              <ion-toggle checked="false" [(ngModel)]="isToggled" (ionChange)="notify()"></ion-toggle>
+          </ion-item>
+
+      </ion-col>
+
+    </ion-row>
+
+    <ion-row class="row-margin">
+
+        <ion-col>
+            <div class="button-center">
+              <button ion-button color="dark" outline round (click)= "clearAll()">Clear all</button>
+        </div>
+        </ion-col>
+  
+      </ion-row>
+
+  </ion-grid>
+
+  <ion-fab left bottom>
+      <button ion-fab color="dark"><ion-icon name="arrow-dropright"></ion-icon></button>
+      <ion-fab-list side="right">
+        <button ion-fab><ion-icon name="logo-facebook"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-twitter"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-vimeo"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-googleplus"></ion-icon></button>
+        <button ion-fab><ion-icon name="logo-github"></ion-icon></button>
+      </ion-fab-list>
+    </ion-fab>
+
+  
+</ion-content>
