@@ -10,6 +10,7 @@ import { Storage } from '@ionic/storage';
 export class HomePage {
 
   name: string;
+  badge: string;
 
   
 
@@ -26,6 +27,9 @@ export class HomePage {
     this.storage.get("Name").then((data)=>{
       this.name = data;
    });
+   this.storage.get("Stage").then((data)=>{
+    this.badge = data;
+ });
   }
 
 

@@ -23,6 +23,11 @@ export class IonicMagicsPage {
   public pan: number = 0;
   public swipe: number = 0;
   public tap: number = 0;
+  brightness: number = 20;
+  contrast: number = 0;
+  warmth: number = 1300;
+  structure: any = { lower: 33, upper: 60 };
+  text: number = 0;
 
 
   constructor(public navCtrl: NavController, public navParams: NavParams, public popoverCtrl: PopoverController, public modalCtrl: ModalController) {
@@ -57,6 +62,7 @@ export class IonicMagicsPage {
     let modal = this.modalCtrl.create(SearchBarPage);
     modal.present();
   }
+  
 
 
 }
